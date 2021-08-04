@@ -63,7 +63,7 @@ if($form_data->action == 'Edit')
 	$name = mysqli_real_escape_string($connect, $form_data->name); 
 	$address = mysqli_real_escape_string($connect, $form_data->address);
 	$salary = mysqli_real_escape_string($connect, $form_data->salary); 
-	$query = "UPDATE employees SET name = '$name', address = '$address', salary = '$salary', WHERE id='".$form_data->id."'";
+	$query = "UPDATE employees SET name = '$name', address = '$address', salary = '$salary' WHERE id='".$form_data->id."'";
 	if(mysqli_query($connect, $query))
 	{
 		$data["message"] = "Data Updated";         
